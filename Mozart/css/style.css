@@ -1,0 +1,224 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  background-color: #fff;
+}
+.wrapper {
+  max-width: 120rem;
+  min-width: 20rem;
+  margin: auto;
+}
+/* Page header */
+.page__header {
+    padding: 6rem 0;
+    padding-left: 4rem;
+}
+/* Menu */
+
+ul.menu {
+  display: flex;
+  list-style: none;
+  text-transform: uppercase;
+  justify-content: space-between;
+  align-items: center;
+}
+a {
+  text-decoration: none;
+  font-size: 1rem;
+  font-family: "Myriad Pro";
+  color: #111;
+  line-height: 1.2;
+}
+
+a:hover { 
+  color: rgb(38, 53, 85);
+}
+a:active {
+  color: #993399;
+}
+ul {
+    display: block;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+ul:after {
+    display: block;
+    content: ' ';
+    clear: both;
+    float: none;
+}
+ul.submenu {
+    display: none;
+    position: absolute;
+    width: 4.2rem;
+    height: 5rem;
+    top: 125px;
+    left: 260px;
+    background-color: white;
+    text-align: center;
+}
+ul.submenu:before {
+    content: "";
+    display: inline-block;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 0 5px 8.7px 5px;
+    border-color: transparent transparent #ffffff; transparent;
+    position: absolute;
+    top: -10px;
+    left: 27px;
+}
+ul.submenu > li {
+    display: block;
+}
+ul.submenu > li > a {
+    display: block;
+    color: rgb(107, 116, 136);
+    padding-bottom: 10px;
+    background-color: #fff;
+}
+
+ul.menu > li:hover > ul.submenu {
+    display: block;
+  }
+
+hr {
+	border: 5px solid #0fd1d0;
+}
+
+/* MAIN */
+.section__container {
+	padding: 75px 70px 195px 70px;
+	display: flex;
+    margin: auto;
+    position: relative;
+}
+.section__title {
+  font-size: 28px;
+  font-family: "OpenSans";
+  color: rgb(0, 0, 0);
+  text-transform: uppercase;
+  line-height: 1.2;
+  text-align: left;
+  position: absolute;
+  top: 30px;
+  left: 70px;
+}
+
+@media (min-width: 768px) {
+  .section__body {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between; } }
+.article__title {
+  font-size: 14px;
+  font-family: "OpenSans";
+  color: rgb(0, 0, 0);
+  font-weight: bold;
+  text-transform: uppercase;
+  line-height: 1.2;
+}
+.article__text {
+  font-size: 14px;
+  font-family: "OpenSans";
+  color: rgb(0, 0, 0);
+  line-height: 1.5;
+  text-align: justifyLeft;
+}
+.article {
+  margin-bottom: 1.25rem; }
+  .article:last-child {
+    margin-bottom: 0; }
+  @media (min-width: 480px) and (max-width: 768px) {
+    .article:nth-last-child(-n + 3) {
+      display: none; } }
+  @media (min-width: 768px) {
+    .article {
+      -ms-flex-preferred-size: 49%;
+      flex-basis: 49%; }
+      .article:last-child {
+        display: none; } }
+  @media (min-width: 1024px) {
+    .article {
+      -ms-flex-preferred-size: 33%;
+      flex-basis: 33%; }
+      .article:last-child {
+        display: block; } }
+
+.article:before {
+  display: block;
+  position: absolute;
+  width: 32px;
+  height: 28px;
+  top: 40%;
+  left: 50%;
+  margin: -14px 0 0 -10px;
+  background: url("../img/zoom-icon.svg");
+  background-repeat: no-repeat;
+  background-size: contain;
+  content: '';
+  opacity: 0;
+  z-index: 1;
+  -webkit-transition: all 0.3s linear;
+  -o-transition: all 0.3s linear;
+  transition: all 0.3s linear; }
+
+.article:hover:before {
+  top: 50%;
+  opacity: 1; }
+
+.article:after {
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 98%;
+  top: 0;
+  background: rgba(0, 0, 0, 0.5);
+  content: '';
+  opacity: 0;
+  -webkit-transition: all 0.3s linear;
+  -o-transition: all 0.3s linear;
+  transition: all 0.3s linear; }
+
+.article:hover:after {
+  opacity: 1; }
+
+.article {
+  position: relative;
+  overflow: hidden; }
+
+.button {
+  display: inline-block;
+  padding: 12px;
+  border-radius: 16px;
+  color: #F4F7F5;
+  background-color: #0fd1d0;
+  text-transform: uppercase;
+  text-decoration: none;
+  font-weight: bold;
+  transition: all 0.3s ease-out;
+  margin: auto;
+}
+
+.button--hover:hover {
+  padding-left: 40px;
+  padding-right: 40px;
+  background-color: #4B88A2;
+  text-shadow: 0 0 5px #F4F7F5;
+}
+
+  /* FOOTER */
+.footer__img {
+  width: 90rem;
+  margin: auto;
+}
